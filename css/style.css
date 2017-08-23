@@ -1,5 +1,6 @@
 body {
 	margin-top: 2%;
+	background-color: black;
 }
 
 #magazine {
@@ -9,8 +10,8 @@ body {
 }
 
 .page > img {
-	height: 100%;
 	width: auto;
+	max-height: 100%;
 	position: relative;
 }
 
@@ -20,12 +21,15 @@ p {
 	background-color: black;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media (max-width: 992px) {
+  .show-on-desktop, .hide-on-mobile { display: none; }
+}
 
-	.page > img {
-		height: 100%;
-		width: auto;
-		position: absolute;
-	}
-  
+@media (min-width: 991px) {
+  .hide-on-desktop, .show-on-mobile { display: none; }
+}
+
+.page-moble > img {
+	width: 100%;
+	height: auto;
 }
